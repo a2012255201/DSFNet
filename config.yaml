@@ -1,0 +1,27 @@
+train:
+  use_amp: False
+  device: cuda
+  resume: False
+  seed: 42
+  stage_epochs: [600,0]
+  ckpt_name: last
+  valid_frequency: 1
+  save_dir: ./checkpoint
+  model_name: DSFNet
+  task_name: DSFNet
+
+optim:
+  lr_init: 2e-4
+  lr_min: 1e-6
+  warmup_epochs: 5
+  weight_decay: 1e-6
+  use_cycle_limit: False
+  cycle_decay: 0.5
+
+data:
+  train_path: /root/autodl-tmp/UIEB/train
+  train_batch_size: [8, 2]
+  train_img_size: [256, 512]
+  valid_path: /root/autodl-tmp/UIEB/val
+  num_workers: 8
+  pin_memory: True

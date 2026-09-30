@@ -1,0 +1,6 @@
+numpy>=1.23,<2
+opencv-python>=4.8,<4.13
+tqdm>=4.65
+einops>=0.6
+timm==0.9.16
+pytorch-msssim>=1.0.0
